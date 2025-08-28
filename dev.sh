@@ -54,7 +54,7 @@ run_action() {
         ;;
     wipe)
         printbox "Wipe Buildfiles"
-        echo "$(( $(rm -rvf "$BUILD_DIR"/** 2>/dev/null | wc -l) )) files deleted."
+        echo "$(( $(rm -rvf "$BUILD_DIR" 2>/dev/null | wc -l) )) files deleted."
         ;;
     build)
         printbox "Build Project"
@@ -66,7 +66,7 @@ run_action() {
         ;;
     rebuild)
         printbox "Clean Buildfiles"
-        echo "$(( $(rm -rvf "$BUILD_DIR"/** 2>/dev/null | wc -l) )) files deleted."
+        echo "$(( $(rm -rvf "$BUILD_DIR" 2>/dev/null | wc -l) )) files deleted."
         printbox "Rebuild Project"
         time build_project
         ;;
