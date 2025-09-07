@@ -3,3 +3,7 @@ build/
 
 # Ignore compile command, they are generated locally anyway
 compile_commands.json
+
+# Ignore clangd cache
+.cache
+
