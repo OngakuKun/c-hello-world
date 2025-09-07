@@ -5,7 +5,7 @@
 
 #include "typedef.h"
 
-int main() {
+int main(void) {
 
     srand((unsigned)time(NULL));
 
@@ -13,6 +13,8 @@ int main() {
     int8 a = rand() % ((INT8_MAX / 2) + 1);
     int8 b = rand() % ((INT8_MAX / 2) + 1);
 
-    printf("Hello, World! The random seed is: %" PRId8 "\n", a + b);
+    printf("Hello, World! Calculate: a(%" PRId8 ") + b(%" PRId8 ") = %" PRId8
+           "\n",
+           a, b, a + b);
     return 0;
 }
